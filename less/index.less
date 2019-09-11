@@ -55,6 +55,8 @@ table {
     box-sizing: border-box;
 }
 
+@border: black 2px solid;
+
 html {
     overflow: hidden;
 
@@ -66,6 +68,17 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
+@default-color: #39454b;
+.greyb-whitef{
+    color: white;
+    background-color: @default-color;
+    }
+
+.whiteb-greyf {
+    color:@default-color;
+    background-color: white;
+}
+
 html, body {
     
     height: 100%;
@@ -74,7 +87,7 @@ html, body {
     font-weight: 300;
     font-size: 14pt;
     line-height: 1.75em;
-    color: #39454b;
+    color: @default-color;
     letter-spacing: 0.025em;
     scroll-behavior: smooth;
 
@@ -139,11 +152,6 @@ html, body {
 
 
 }
-
-section {
-    border: black 2px solid;
-}
-
 .hero-image {
     background-image: url("../imgs/hero-img.png");
     background-size: 100%;
@@ -156,12 +164,14 @@ section {
     text-align: center;
 }
 
-
-section {
+.screen-width {
     width: 100%;
-    
 }
+
 .section1 {
+    .whiteb-greyf();
+
+    .screen-width();
     color: white;
     .text-content {
         padding-top: 20%;
@@ -174,6 +184,8 @@ section {
 }
 
 .section2 {
+    .screen-width();
+    .greyb-whitef();
         h1 {
             font-size: 1.5em;
         }
@@ -181,6 +193,9 @@ section {
 }
 
 .section3 {
+    .screen-width();
+    .whiteb-greyf();
+
     h1 {
         font-size: 1.5em;
     }
@@ -188,15 +203,63 @@ section {
     .flex-container {
         display: flex;
         flex-flow: row nowrap;
+        @media (max-width: 500px){
+            flex-flow: column nowrap;
+        }
         justify-content: space-around;
         margin-left: 5%;
         margin-right: 5%;
     }
     .flex-item {
-        border: 2px black solid;
+        padding: 2%;
+        border: @border;
         font-size: 13px;
         text-align: center;
         height: 150%;
         margin-bottom: 5%;
     }
+}
+.section4 {
+    .greyb-whitef();
+    margin-top: 10%;
+    .screen-width();
+    text-align: center;
+    h1 {
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+    .flex-container {
+        margin-left: 30%;
+        margin-right: 30%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .box {
+        .screen-width();
+        h1 {
+            text-align: center;
+        }
+        padding: 10%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        border: @border;
+        strong {
+            font-weight: 700;
+        }
+
+        .resume-content {
+            font-size: 0.75em;
+            text-align: justify;
+        }
+    }
+}
+
+
+.section5 {
+    .screen-width();
+    .greyb-whitef();
 }
