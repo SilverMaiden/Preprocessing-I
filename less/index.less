@@ -55,12 +55,24 @@ table {
     box-sizing: border-box;
 }
 
+html {
+    overflow: hidden;
+
+}
+
+body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
 html, body {
+    
     height: 100%;
 
     font-family: "Source Sans Pro", "sans-serif";
     font-weight: 300;
-    font-size: 18pt;
+    font-size: 14pt;
     line-height: 1.75em;
     color: #39454b;
     letter-spacing: 0.025em;
@@ -69,7 +81,7 @@ html, body {
     font-family: "Source Sans Pro", "sans-serif";
 }
 #header {
-    background-color: black !important;
+    background-color: #1f2225 !important;
     color: white;
     position: fixed;
     z-index: 10000;
@@ -80,8 +92,13 @@ html, body {
     color: white;*/
     height: 3em;
     line-height: 3em;
-    box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
-
+    box-shadow: 0.125em 0.125em 0.4em 0.01em rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-between;
+    h1 {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
     }
 
    nav {
@@ -91,7 +108,7 @@ html, body {
        height: 3em;
        line-height: 3em;
         a {
-           font-size: 1.25em;
+           font-size: 1.5em;
         }
 
        ul {
@@ -118,6 +135,9 @@ html, body {
 .container {
     height: 100%;
     background-color: grey;
+    font-size: 1em;
+
+
 }
 
 section {
@@ -135,22 +155,36 @@ section {
     padding: 5%;
     text-align: center;
 }
-.section1 {
+
+
+section {
     width: 100%;
-    height: 100%;
+    
+}
+.section1 {
     color: white;
     .text-content {
         padding-top: 20%;
     }
+    padding: 20%;
+    h1 {
+        font-size: 1.5em;
+    }
+
 }
 
 .section2 {
-    width: 100%;
-    height: 50%;
+        h1 {
+            font-size: 1.5em;
+        }
 
 }
 
 .section3 {
+    h1 {
+        font-size: 1.5em;
+    }
+
     .flex-container {
         display: flex;
         flex-flow: row nowrap;

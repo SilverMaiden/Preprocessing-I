@@ -143,11 +143,19 @@ table {
 * {
   box-sizing: border-box;
 }
+html {
+  overflow: hidden;
+}
+body {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
 html,
 body {
   height: 100%;
   font-weight: 300;
-  font-size: 18pt;
+  font-size: 14pt;
   line-height: 1.75em;
   color: #39454b;
   letter-spacing: 0.025em;
@@ -155,7 +163,7 @@ body {
   font-family: "Source Sans Pro", "sans-serif";
 }
 #header {
-  background-color: black !important;
+  background-color: #1f2225 !important;
   color: white;
   position: fixed;
   z-index: 10000;
@@ -166,7 +174,13 @@ body {
     color: white;*/
   height: 3em;
   line-height: 3em;
-  box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0.125em 0.125em 0.4em 0.01em rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: space-between;
+}
+#header h1 {
+  padding-left: 2%;
+  padding-right: 2%;
 }
 nav {
   position: absolute;
@@ -176,7 +190,7 @@ nav {
   line-height: 3em;
 }
 nav a {
-  font-size: 1.25em;
+  font-size: 1.5em;
 }
 nav ul {
   margin: 0;
@@ -198,6 +212,7 @@ nav ul li a {
 .container {
   height: 100%;
   background-color: grey;
+  font-size: 1em;
 }
 section {
   border: black 2px solid;
@@ -212,17 +227,24 @@ section {
   padding: 5%;
   text-align: center;
 }
-.section1 {
+section {
   width: 100%;
-  height: 100%;
+}
+.section1 {
   color: white;
+  padding: 20%;
 }
 .section1 .text-content {
   padding-top: 20%;
 }
-.section2 {
-  width: 100%;
-  height: 50%;
+.section1 h1 {
+  font-size: 1.5em;
+}
+.section2 h1 {
+  font-size: 1.5em;
+}
+.section3 h1 {
+  font-size: 1.5em;
 }
 .section3 .flex-container {
   display: flex;
