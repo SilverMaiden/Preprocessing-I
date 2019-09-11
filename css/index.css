@@ -154,7 +154,7 @@ body {
   font-family: "Source Sans Pro", "sans-serif";
 }
 #header {
-  background-color: black !important;
+  background-color: #1f2225 !important;
   color: white;
   position: fixed;
   z-index: 10000;
@@ -165,7 +165,7 @@ body {
     color: white;*/
   height: 3em;
   line-height: 3em;
-  box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0.125em 0.125em 0.5em #1f2225;
 }
 nav {
   position: absolute;
@@ -199,24 +199,34 @@ nav ul li a {
   background-color: grey;
 }
 section {
-  background: inherit;
-  color: white;
   border: black 2px solid;
 }
 .hero-image {
-  background-image: url("../imgs/hero-img.png");
+  background: url("../imgs/hero-img.png");
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
 .text-content {
   padding: 100px;
+  text-align: center;
 }
 .section1 {
   width: 100%;
   height: 100%;
+  color: white;
 }
 .section2 {
   width: 100%;
   height: 50%;
+}
+.section3 .flex-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row nowrap;
+}
+.section3 .flex-element {
+  border: black 2px solid;
+  text-align: center;
 }
