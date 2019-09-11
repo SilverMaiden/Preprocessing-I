@@ -154,8 +154,8 @@ body {
   font-family: "Source Sans Pro", "sans-serif";
 }
 #header {
-  background-color: white !important;
-  border: black 2px solid;
+  background-color: black !important;
+  color: white;
   position: fixed;
   z-index: 10000;
   left: 0;
@@ -204,7 +204,10 @@ section {
   border: black 2px solid;
 }
 .hero-image {
-  background-image: url("https://img1.wsimg.com/isteam/ip/523583e4-deef-4b4d-8d10-e4737e254345/blur-breathtaking-clouds-1903702.jpg");
+  background-image: url("../imgs/hero-img.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .text-content {
   padding: 100px;
