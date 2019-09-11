@@ -199,8 +199,6 @@ nav ul li a {
   background-color: grey;
 }
 section {
-  background: inherit;
-  color: white;
   border: black 2px solid;
 }
 .hero-image {
@@ -210,13 +208,32 @@ section {
   background-position: center;
 }
 .text-content {
-  padding: 100px;
+  padding: 5%;
+  text-align: center;
 }
 .section1 {
   width: 100%;
   height: 100%;
+  color: white;
+}
+.section1 .text-content {
+  padding-top: 20%;
 }
 .section2 {
   width: 100%;
   height: 50%;
+}
+.section3 .flex-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.section3 .flex-item {
+  border: 2px black solid;
+  font-size: 13px;
+  text-align: center;
+  height: 150%;
+  margin-bottom: 5%;
 }
