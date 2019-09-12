@@ -1,1 +1,327 @@
-/* Compile your LESS file! */
+@import url("fontawesome-all.min.css");
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdr.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwlxdr.ttf) format('truetype');
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html {
+  overflow: hidden;
+}
+body {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.greyb-whitef {
+  color: white;
+  background-color: #39454b;
+}
+.whiteb-greyf {
+  color: #39454b;
+  background-color: white;
+}
+html,
+body {
+  height: 100%;
+  font-weight: 300;
+  font-size: 14pt;
+  line-height: 1.75em;
+  color: #39454b;
+  letter-spacing: 0.025em;
+  scroll-behavior: smooth;
+  font-family: "Source Sans Pro", "sans-serif";
+}
+#header {
+  background-color: #1f2225 !important;
+  color: white;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  /*background: #1f2225 ;
+    color: white;*/
+  height: 3em;
+  line-height: 3em;
+  box-shadow: 0.125em 0.125em 0.4em 0.01em rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: space-between;
+}
+#header h1 {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+nav {
+  position: absolute;
+  right: 0.5em;
+  top: 0;
+  height: 3em;
+  line-height: 3em;
+}
+nav a {
+  font-size: 1.5em;
+}
+nav ul {
+  margin: 0;
+}
+nav ul li {
+  display: inline-block;
+  margin-left: 0.5em;
+  font-size: 0.5em;
+}
+nav ul li a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  height: 3em;
+  line-height: 3em;
+  padding: 0 0.5em 0 0.5em;
+  outline: 0;
+}
+.container {
+  height: 100%;
+  background-color: grey;
+  font-size: 1em;
+}
+.hero-image {
+  background-image: url("../imgs/hero-img.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.text-content {
+  padding: 5%;
+  text-align: center;
+}
+.screen-width {
+  width: 100%;
+}
+.section1 {
+  width: 100%;
+  padding: 20%;
+}
+.section1 .text-content {
+  padding-top: 10%;
+}
+.section1 h1 {
+  font-size: 1.5em;
+}
+.section2 {
+  width: 100%;
+  color: white;
+  background-color: #39454b;
+}
+.section2 h1 {
+  font-size: 1.5em;
+}
+.section3 {
+  width: 100%;
+  color: #39454b;
+  background-color: white;
+}
+.section3 h1 {
+  font-size: 1.5em;
+}
+.section3 .flex-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+@media (max-width: 500px) {
+  .section3 .flex-container {
+    flex-flow: column nowrap;
+  }
+}
+.section3 .flex-item {
+  color: white;
+  background-color: #39454b;
+  padding: 2%;
+  border: black 2px solid;
+  font-size: 13px;
+  text-align: center;
+  height: 150%;
+  margin-bottom: 5%;
+}
+.section4 {
+  color: white;
+  background-color: #39454b;
+  width: 100%;
+  padding-top: 10%;
+  text-align: center;
+}
+.section4 h1 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.section4 .flex-container {
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 5%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.section4 .box {
+  width: 100%;
+  color: #39454b;
+  background-color: white;
+  padding: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border: black 2px solid;
+}
+.section4 .box h1 {
+  text-align: center;
+}
+.section4 .box strong {
+  font-weight: 700;
+}
+.section4 .box .resume-content {
+  font-size: 0.75em;
+  text-align: justify;
+}
+.section5 {
+  width: 100%;
+  color: #39454b;
+  background-color: white;
+}
